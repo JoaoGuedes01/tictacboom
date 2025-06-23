@@ -36,7 +36,7 @@ const HowToPlay = ({ setPage }) => {
             mb={{ base: 6, sm: 8 }}
             lineHeight="tight"
           >
-            How to Play <Text as="span" color="indigo.600">GuedesTacBoom!</Text>
+            How to Play <Text as="span" color="indigo.600">TicTacGuedes!</Text>
           </Heading>
 
           <Box spacing={{ base: 5, sm: 6 }} fontSize={{ base: 'lg', sm: 'xl' }} color="gray.800" fontWeight="medium">
@@ -64,11 +64,11 @@ const HowToPlay = ({ setPage }) => {
               </Text>
             </Flex>
 
-            {/* Rule 4: Dice Roll 'Boom' */}
+            {/* Rule 4: Dice Roll 'Guedes' */}
             <Flex align="flex-start" mb={5}>
               <Icon as={FaBomb} color="indigo.600" mr={3} boxSize="1.75em" />
               <Text flex="1">
-                If the dice lands on <Text as="strong" color="red.600">"BOOM"</Text>: You must say a word where the letter(s) from your card can be found <Text as="strong" color="red.600">ANYWHERE</Text> in the word.
+                If the dice lands on <Text as="strong" color="red.600">"GUEDES"</Text>: You must say a word where the letter(s) from your card can be found <Text as="strong" color="red.600">ANYWHERE</Text> in the word.
               </Text>
             </Flex>
 
@@ -82,7 +82,7 @@ const HowToPlay = ({ setPage }) => {
           </Box>
 
           <Text textAlign="center" color="gray.600" mt={8} fontSize={{ base: 'base', sm: 'lg' }} fontWeight="light" fontStyle="italic">
-            Keep it quick, keep it fun, and don't let the boom get you!
+            Keep it quick, keep it fun, and don't let the guedes get you!
           </Text>
           <Button marginTop='1rem' width="100%" onClick={() => setPage('home')} variant='surface' colorPalette='red'>Back to Menu</Button>
         </Box>

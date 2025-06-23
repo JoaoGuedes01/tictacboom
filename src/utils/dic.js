@@ -56,5 +56,5 @@ export const cards = [
 export const dice = [
 'tic',
 'tac',
-'boom'
+'guedes'
 ]

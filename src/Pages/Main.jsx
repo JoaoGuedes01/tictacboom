@@ -13,13 +13,13 @@ const Main = (props) => {
     >
       {/* Top Row */}
       <GridItem as="header" textAlign="center">
-        <Heading size={"4xl"}>GuedesTacBoom</Heading>
+        <Heading size={"4xl"}>TicTacGuedes</Heading>
       </GridItem>
 
       {/* Middle Row (this is the one that grows) */}
       <GridItem style={{ marginTop: '10rem' }} display="flex" alignItems="flex-start" justifyContent="center">
         <VStack style={{ width: '80%' }} gap={8}>
-          <Button onClick={() => setPage('game')} colorPalette='green' variant='surface' style={{ width: '100%', maxWidth: "25rem" }}>Play GuedesTacBoom</Button>
+          <Button onClick={() => setPage('game')} colorPalette='green' variant='surface' style={{ width: '100%', maxWidth: "25rem" }}>Play TicTacGuedes</Button>
           <Button onClick={() => setPage('settings')} colorPalette='orange' variant='surface' style={{ width: '100%', maxWidth: "25rem" }}>Settings</Button>
           <Button onClick={() => setPage('howto')} colorPalette='blue' variant='surface' style={{ width: '100%', maxWidth: "25rem" }}>How to Play</Button>
         </VStack>

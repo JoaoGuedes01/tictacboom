@@ -1,0 +1,36 @@
+# .github/workflows/deploy.yml
+
+name: Deploy React Vite App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # This workflow will run every time you push to the 'main' branch.
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # The type of runner that the job will run on.
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Action to check out your repository code.
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Specify the Node.js version. Adjust if your project requires a different version.
+          cache: 'npm' # Cache npm dependencies for faster builds.
+
+      - name: Install dependencies
+        run: npm install # Installs all your project's npm dependencies.
+
+      - name: Build Vite app
+        run: npm run build # Runs the build script defined in your package.json (usually 'vite build').
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Automatically provided by GitHub.
+          publish_dir: ./dist # The directory where Vite outputs the build files (default is 'dist').
+          # Set a custom commit message for the deployment commit (optional).
+          # commit_message: 'Deploying to GitHub Pages'
